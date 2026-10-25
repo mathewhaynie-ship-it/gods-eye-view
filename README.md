@@ -32,7 +32,7 @@ _“pretty cool”_ — [Brendan Eich](https://x.com/BrendanEich/status/20945920
 
 <div align="center">
 
-**[Quick Start](#-quick-start) · [First Five Minutes](#-the-first-five-minutes) · [Talk to It](#-talk-to-it) · [What's Live](#-whats-on-the-globe) · [Under the Hood](#-under-the-hood) · [Keys & Costs](#-api-keys) · [Contributing](CONTRIBUTING.md)**
+**[Getting started](#getting-started) · [Quick Start](#-quick-start) · [First Five Minutes](#-the-first-five-minutes) · [Talk to It](#-talk-to-it) · [What's Live](#-whats-on-the-globe) · [Under the Hood](#-under-the-hood) · [Keys & Costs](#-api-keys) · [Contributing](CONTRIBUTING.md)**
 
 </div>
 
@@ -86,6 +86,36 @@ Start with the included data sources, then add your own. Each layer is a separat
 ▶️ **[The full walkthrough of everything below, on YouTube](https://www.youtube.com/watch?v=GRJaKcXZS94)**
 
 </div>
+
+## Getting started
+
+No account and no API key. You need **Node.js 24.14 or later (the 24 line) or Node.js 26**.
+Node 22 is too old, and Node 25 is end-of-life. Install Node from
+[nodejs.org](https://nodejs.org/) (the 24 LTS installer), then open a new terminal.
+
+From the project folder, the same commands work on **Windows** (PowerShell or
+Command Prompt), **Mac**, and **Linux**:
+
+```bash
+npm ci
+npm run doctor
+npm run build
+npm run dev
+```
+
+Open **http://localhost:4173** and choose **Live Contacts**. The globe and the
+keyless layers (flights, satellites, earthquakes, public cameras, and the rest
+listed in [SETUP.md](SETUP.md)) work before you add any key.
+
+`npm run build` creates the production files. `npm run preview` serves that
+build, including the local data server, at the same address. Stop `npm run dev`
+first if port 4173 is already taken.
+
+The Mac/Linux shortcut `./scripts/dev-fresh.sh` is optional. On a Mac it can
+also read keys from the Keychain.
+
+Step-by-step install notes, every environment variable, and how to put a copy
+on the internet are in **[SETUP.md](SETUP.md)**.
 
 ## ⚡ Quick Start
 
